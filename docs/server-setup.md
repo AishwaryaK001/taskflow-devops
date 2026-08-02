@@ -207,3 +207,33 @@ sudo ufw status
 # Summary
 
 The Ubuntu Server has been prepared as the deployment environment for the TaskFlow DevOps Platform. A dedicated deployment user has been created, the firewall has been configured, and the required directory structure has been established. The server is now ready for Docker installation and the implementation of an automated CI/CD pipeline.
+
+
+
+
+
+
+## Docker Installation
+
+Docker Engine has been installed from Docker's official APT repository.
+
+### Installed Components
+
+- Docker Engine
+- Docker CLI
+- Containerd
+- Docker Buildx
+- Docker Compose Plugin
+
+### Verification Commands
+
+```bash
+docker --version
+docker compose version
+docker ps
+```
+
+### Notes
+
+- Docker service is enabled to start automatically on boot.
+- Both the development user and the `deploy` user have been added to the `docker` group.
